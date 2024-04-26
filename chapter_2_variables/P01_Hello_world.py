@@ -15,17 +15,7 @@ print(message)
 
 # Strings Variables 
 
-"""
-Strings :
-1. A string is series of characters . Anything inside quotes is cosidered strings in python . You can use both [ ' ' or " "].
-2. A methon is an action that python can perform on the piece of data. 
-3. name.title() -: title is an Action . '.' is telling python interpreter to callaction on name .
-4. Each method is followed by set of parathesis because methods genrally requires  additional inforamtion to perform their work. [title()]
-5. f-strings : formatted strings 
-6. In programming - Whitespace refers to any non printing characters . Such as spaces, tabs , end of line symbols .
-7. rstrip() , lstrip() , strip() functions 
 
-"""
 sample_string  =  'Python sample strigs !!'
 sample_string2 = "Pythn Sample strings 2 !!"
 
@@ -53,3 +43,21 @@ print(len(fav_language.rstrip()))
 
 print(fav_language.lstrip())
 print(fav_language.strip())
+
+# Removing pre-fixes
+print('\n'+'*'*10 +'\t Removing pre-fixes \t ' + '*'*10)
+
+url = 'https://github.com/DataWithRishabhShukla/'
+print(url.removeprefix('https://'))
+
+"""
+Strings :
+1. A string is series of characters . Anything inside quotes is cosidered strings in python . You can use both [ ' ' or " "].
+2. A methon is an action that python can perform on the piece of data. 
+3. name.title() -: title is an Action . '.' is telling python interpreter to callaction on name .
+4. Each method is followed by set of parathesis because methods genrally requires  additional inforamtion to perform their work. [title()]
+5. f-strings : formatted strings 
+6. In programming - Whitespace refers to any non printing characters . Such as spaces, tabs , end of line symbols .
+7. rstrip() , lstrip() , strip() functions 
+
+"""
