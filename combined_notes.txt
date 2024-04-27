@@ -1,0 +1,112 @@
+
+"""
+1. Syntax Highlighintng - Python iterprepter will scan line by line then apply different color coding to the fucntion / variables / text /loops.
+2. Python will keep track of latest value of the variables. 
+3. Variable names can not start with number . It can't have space in it.
+4. Variables are often described as boxes you can store your value in . However programaticlly variables are labels assigned to the values.
+5.  
+"""
+
+"""
+Strings :
+1. A string is series of characters . Anything inside quotes is cosidered strings in python . You can use both [ ' ' or " "].
+2. A methon is an action that python can perform on the piece of data. 
+3. name.title() -: title is an Action . '.' is telling python interpreter to callaction on name .
+4. Each method is followed by set of parathesis because methods genrally requires  additional inforamtion to perform their work. [title()]
+5. f-strings : formatted strings 
+6. In programming - Whitespace refers to any non printing characters . Such as spaces, tabs , end of line symbols .
+7. rstrip() , lstrip() , strip() functions 
+
+"""
+
+"""
+Integers :
+    + , - , * , / , // , ** 
+    Supports order of opertions however you can change the order using parathesis .
+
+Float :
+    Number with decimal point . 
+
+Under Score in Numbers :
+    When you're woring the long numbers you can use _ to group digits.
+    nums = 14_000_000_000
+    print(nums) # 14000000000
+
+Constants 
+    Python does not have built in type for constants . However as good practise variable name all in caps is considered as constant.
+    MAX_NUMBER = 5000
+
+"""
+
+"""
+List:
+
+    A list is collection of items in a particular order.
+    Since list mostly contains more than one element . It is good practise to name it plurals .  items , names .
+
+Accessing a list :
+    Using a index , starts with 0 []
+    You can use the -ve index . -1 represents the last element .
+
+Modifying , Adding and Removing Elements :
+    Modifying -> Same as accessing the element
+    
+    Adding 
+        At the end using the append function . motorcycles.append('ducati')
+        At any location we can do using . motorcycles.insert(0,'hero') . This will shift all the elements to the right .
+
+    Remove
+        Using Index : del motorcycles[1] 
+        
+        Using pop method : This will remove the last element form the list 
+            popped_motorcycles = motorcycles.pop()
+            We can use index with pop to remove the items from the list.
+        
+        Remove using the value :
+            motorcycles.remove('ducati')
+            Gives error if element is not present in the list .
+            Also removes only the first occurance of the element.
+    
+    Sorting the List :
+        Using sort :
+            guests.sort()
+            guest.sort(reverse=Ture)
+            Sorts the original list permanently
+
+        Using Sorted :
+            sorted(guests)
+            Does not change the order of the orginal list
+            sorted(cars)
+            sorted(cars ,reverse=True)
+
+
+"""
+
+"""
+Iterating List :
+    Using for loop 
+
+Looping is imporatant because it's one of the most common ways a compoter automates repetetive tasks.
+
+Indendetion will decide , how code blocks will be clubbed together . 
+
+The colon at the end of for statement tells Python to interpret the next line as the start of loop. 
+
+range function : 
+    range(start_sequence, end_sequence,step_size)
+    Defaults : step - 1, start_sequence - 0 
+    range(1,5) - 1,2,3,4
+    range(6)   - 0,1,2,3,4,5
+    numbers = list(range(1,7))
+
+min(digits),max(digits),sum(digits)
+    
+"""
+
+"""
+slicing a list 
+traversing a subset of list 
+copying a list
+    list1= list2 -> this will not copy list . It will be second variable pointing to the same list .
+"""
+
