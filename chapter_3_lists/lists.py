@@ -26,9 +26,24 @@ Modifying , Adding and Removing Elements :
             motorcycles.remove('ducati')
             Gives error if element is not present in the list .
             Also removes only the first occurance of the element.
+    
+    Sorting the List :
+        Using sort :
+            guests.sort()
+            guest.sort(reverse=Ture)
+            Sorts the original list permanently
+
+        Using Sorted :
+            sorted(guests)
+            Does not change the order of the orginal list
+            sorted(cars)
+            sorted(cars ,reverse=True)
 
 
 """
+
+
+
 import os 
 
 os.system('clear')
@@ -89,3 +104,26 @@ if too_expensive in motorcycles:
     motorcycles.remove(too_expensive)
     print(f'{too_expensive.title()} is too expensive for me !!')
 print(motorcycles)
+
+
+os.system('clear')
+print(f'Sorsting the list ')
+bicycles = ['trek' , 'cannondale', 'redline', 'specialzed']
+print(f'Orginal list : {bicycles}')
+bicycles.sort()
+print(bicycles)
+bicycles.sort(reverse=True)
+print(bicycles)
+
+os.system('clear')
+cars =['bmw', 'audi', 'toyota', 'subaru']
+print(f'Orginal list : {cars}')
+print(sorted(cars))
+print(sorted(cars ,reverse=True))
+
+# reverse function 
+os.system('clear')
+cars =['bmw', 'audi', 'toyota', 'subaru']
+cars.reverse()
+print(cars)
+
