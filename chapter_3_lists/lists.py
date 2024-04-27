@@ -23,7 +23,10 @@ Modifying , Adding and Removing Elements :
             We can use index with pop to remove the items from the list.
         
         Remove using the value :
-            
+            motorcycles.remove('ducati')
+            Gives error if element is not present in the list .
+            Also removes only the first occurance of the element.
+
 
 """
 import os 
@@ -79,3 +82,10 @@ first_motorcycle = motorcycles.pop(1)
 print(f'First motorcycle which I owned was: {first_motorcycle.title()}')
 
 # Removing using value 
+os.system('clear')
+motorcycles = ['honda','yamaha','suzuki','ducati']
+too_expensive = 'ducati'
+if too_expensive in motorcycles:
+    motorcycles.remove(too_expensive)
+    print(f'{too_expensive.title()} is too expensive for me !!')
+print(motorcycles)
