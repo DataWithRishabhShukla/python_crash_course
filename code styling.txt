@@ -8,3 +8,7 @@ PEP
     - Blank Lines 
 """
 
+"""
+Chapter 5 - if styling 
+    - PEP8 advises single spaces around the comparison operator.
+"""

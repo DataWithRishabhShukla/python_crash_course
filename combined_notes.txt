@@ -110,7 +110,8 @@ copying a list
     list1= list2 -> this will not copy list . It will be second variable pointing to the same list .
 """
 
+Chapter - 5 If statement 
 """
- 
+    '==' tests the condition in case sensitive manner
 
 """
