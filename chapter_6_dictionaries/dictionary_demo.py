@@ -22,8 +22,20 @@ Adding New key-value Pairs
     - you can add new key value pairs at any time 
     - dictionary  with new_key name wrapped in square brackets along with new value 
 
-    
-    
+Creating empty dictionary 
+    - <dictionary_name> = {}
+
+Modifying value in the dictionary 
+    - alien_0['color'] = 'green'
+
+Removing a key-value pairs 
+    - del alien_0['color']
+
+using get to to access the dictionary element
+    - alien_0 = {'color': 'green', 'speed':'slow'}
+    - print(alien_0['x_pos']) # Throws key-error
+    - print(alien_0.get('x_pos','This key does not exist !'))
+    - If you 
 """
 
 import os 
@@ -39,3 +51,13 @@ alien_0['x_position'] = 25
 alien_0['y_position'] = 0
 print(f'alien_0 : {alien_0}')
 print(type(alien_0))
+
+
+print(f"\nOriginal dictionary :{alien_0}")
+del alien_0['color']
+print(f"After removing the color key value pair :{alien_0}\n")
+
+# using the del to access element
+alien_0 = {'color': 'green', 'speed':'slow'}
+#print(alien_0['x_pos']) # Throws key-error
+print(alien_0.get('x_pos','This key does not exist !'))

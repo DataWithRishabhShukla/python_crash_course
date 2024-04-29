@@ -138,3 +138,5 @@ Types of if statements
     - In the if-elif chain if once codition is true , it will omit the evalution of remaining conditions .
     - If multiple if can be true then better to go with series of muiltple if statement .
 """
+
+Chapter - 6 - Dictionary 
