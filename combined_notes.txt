@@ -111,7 +111,30 @@ copying a list
 """
 
 Chapter - 5 If statement 
+
 """
     '==' tests the condition in case sensitive manner
+    Equality Operator   -> '=='
+    Inequality Operator -> '!='
 
+Checking Multiple condition :
+    You can se use 'and' and 'or' for combining the conditions .
+    if age >18 and region =='usa':
+        print('Allow')
+
+in , not in -> To check check existance of valuein list .
+
+Boolean value  -> True or False 
+
+Types of if statements 
+    - simple if statement 
+        if age > 18 :
+            print('You')
+
+    - if else statment 
+    - if-elif-else chain ->  Mutilple if statements 
+    - if-elif chain -> You can omit else block in the if-elif chain 
+
+    - In the if-elif chain if once codition is true , it will omit the evalution of remaining conditions .
+    - If multiple if can be true then better to go with series of muiltple if statement .
 """
