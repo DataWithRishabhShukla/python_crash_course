@@ -35,11 +35,41 @@ using get to to access the dictionary element
     - alien_0 = {'color': 'green', 'speed':'slow'}
     - print(alien_0['x_pos']) # Throws key-error
     - print(alien_0.get('x_pos','This key does not exist !'))
-    - If you 
+    - If you don't define the mesage it will return None .
+
+Looping through dictionary :
+    - dict.items()
+    - dict.keys()  is default behaviour . 
+IMP      - [for key in dict.keys()] is same as [for key in dict] 
+    - dict.values()
+    - looping in an order 
+        - sorted(dict.keys())
+        - for name in sorted(favorite_laguage):
+
+list -> []
+tuple -> ()
+dictianary -> {}
+set -> {}
+
+set 
+    - can be defined using {}
+    - contains only unique value 
+    - you use set() function also to creare set 
+    - Unlike list and dictionaries , sets do not maintain element in specific order 
+    - Both dictiaries and sets use {} ,
+        - if it has key-value then dictionary .
+        - If it has only values then sets 
+
+      
 """
 
-import os 
-os.system('clear')
+languages = {'python' ,'c','java','c'}
+print(languages)
+print(type(languages))
+
+
+# import os 
+# os.system('clear')
 
 # Simple Dictioanary 
 alien_0 = {'color': 'green', 'points': 5}
@@ -61,3 +91,23 @@ print(f"After removing the color key value pair :{alien_0}\n")
 alien_0 = {'color': 'green', 'speed':'slow'}
 #print(alien_0['x_pos']) # Throws key-error
 print(alien_0.get('x_pos','This key does not exist !'))
+
+
+#looping thorugh dict in particular order
+
+favorite_laguage ={
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python'
+}
+
+for name in sorted(favorite_laguage):
+    print(f'\nName: {name}')
+    print(f'Favorite language: {favorite_laguage[name]}')
+
+#Looping thorough the values 
+
+print('Following lagauge have been mentioned !!')
+for language in favorite_laguage.values():
+    print(language.title())
