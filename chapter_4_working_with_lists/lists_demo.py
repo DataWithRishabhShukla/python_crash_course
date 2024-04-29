@@ -19,6 +19,15 @@ min(digits),max(digits),sum(digits)
     
 """
 
+"""
+PEP 
+    - Python Ehancement Proposal 
+    - One of the oldest is PEP8 , It is written keeping in mind code read more times than written. 
+    - Indentation
+    - Line Length - less than 80 chars
+    - Blank Lines 
+"""
+
 import os 
 os.system('clear')
 magicians = ['alice', 'david', 'carolina']
