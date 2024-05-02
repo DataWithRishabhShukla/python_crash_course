@@ -227,5 +227,29 @@ Dictionary in dictionary
 
 Chapter - 7 - User Input and While Loop 
 """
+input(prompt) Function:
+    - Takes only one parameter prompt 
+    - Write clear prompts 
+    - Leave a space after prompt 
+
+Using int() for Numerical input 
+    - int(input('Please enter your age ?'))
+    - 
+
+While Loop:
+    - it executes a code block as long as condition is true .
+
+Using a flag .
+
+Using break to exit loop .
+
+continue 
+    - continue will move the execution to the start if the loop 
+"""
+
+Chapter - 8 - functions
+
+"""
+
 
 """
