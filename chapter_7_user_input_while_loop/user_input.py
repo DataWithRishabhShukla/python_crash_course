@@ -15,6 +15,8 @@ Using a flag .
 
 Using break to exit loop .
 
+continue 
+    - continue will move the execution to the start if the loop 
 """
 
 import os 
