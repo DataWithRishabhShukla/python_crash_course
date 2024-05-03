@@ -12,3 +12,20 @@ PEP
 Chapter 5 - if styling 
     - PEP8 advises single spaces around the comparison operator.
 """
+"""
+Chapter 8 - Functions
+
+Styling Functions 
+    - Functions should have descriptive names and these names should use lowercase letter and underscore
+    - Module names should use these convetions as well
+    - Every function should have a comment in doc string format  """ """
+    - Comment should appear immediately after the function defnition 
+    - If you specify a default for a parameter no space should be used on either side of equal sign 
+        def function_name(param_0, param_1='default_value')
+    - The same convention should be used for keyword argument in function call 
+        function_name(value_0, param_1='value')
+    - all import should come at the begining only thing allowed before it is comments
+    - If module has more than one function it should have two blank lines between function 
+    definitions.
+
+"""
