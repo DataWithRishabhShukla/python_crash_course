@@ -18,6 +18,13 @@ Passing a List
 Modifying a list 
     - When you pass list as arguments to function it will get full access to the list 
     - It can modify the list 
+    - def print_models(unprinted_models, completed_models):
+
+Preventing a function from modifying list 
+    - In here instead of passing a list you can pass a copy of the list 
+    - While calling the function you can pass the copy of the list instead of orginal list 
+    - Using "list_name[:]"
+    - print_models(unprinted_models[:], completed_models):
 """
 import os
 os.system('clear')
@@ -82,3 +89,16 @@ unprinted_design = ['phone case','robot','dodo']
 completed_model = []
 print_models(unprinted_design,completed_model)
 display_models(completed_model)
+
+# Modifying a list
+def print_models(unprinted_models, completed_models):
+    """ Simulate printing each design until none are left."""
+    print('\n\n')
+    while unprinted_models:
+        current_model = unprinted_models.pop()
+        print(f"Printing model: {current_model}")
+        completed_models.append(current_model)
+
+unprinted_design = ['phone case','robot','dodo']
+print_models(unprinted_design[:],completed_model)
+print(unprinted_design)
