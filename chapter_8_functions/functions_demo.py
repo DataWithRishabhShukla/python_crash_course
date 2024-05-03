@@ -42,6 +42,7 @@ equivalent function calls
 
 avoiding arguments errors 
     - unmatched arguments - when you provide fewer or more arguemts than a function needs to do its work.
+
 """
 import os 
 os.system('clear')
