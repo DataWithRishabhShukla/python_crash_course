@@ -4,7 +4,7 @@
 2. Python will keep track of latest value of the variables. 
 3. Variable names can not start with number . It can't have space in it.
 4. Variables are often described as boxes you can store your value in . However programaticlly variables are labels assigned to the values.
-5.  
+5.  added one line
 """
 
 message = 'Hello Python Interpreter !!'
