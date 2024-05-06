@@ -48,7 +48,56 @@ for x in range(0,len(test_list),2):
 
 print(res)
 
-print('\n\n')
-print(test_list[::2])
-print(test_list[1::2])
-print([pair for pair in zip(test_list[::2],test_list[1::2])])
+##################################################################################################################################
+
+# Lists of List to Dictionary
+"""
+The original list is : [['a', 'b', 1, 2], ['c', 'd', 3, 4], ['e', 'f', 5, 6]]
+The mapped Dictionary : {('a', 'b'): (1, 2), ('c', 'd'): (3, 4), ('e', 'f'): (5, 6)}
+"""
+import os 
+os.system('clear')
+
+test_list = [['a', 'b', 1, 2], ['c', 'd', 3, 4], ['e', 'f', 5, 6]]
+
+
+# Dictionary in Python Using Loop
+op_dict={}
+for element in test_list:
+    op_dict[tuple(element[:2])] = tuple(element[2:])
+
+print(op_dict)
+
+# Using Dictionary Comprehension
+mapped_dict = {tuple(element[:2]): tuple(element[2:]) for element in test_list}
+print(mapped_dict)
+
+# Using Dictionary Comprehension - tuple()
+mapped_dict = {(element[0],element[1]):tuple(element[2:]) for element in test_list}
+print(mapped_dict)
+
+##################################################################################################################################
+
+#Python – Convert List of Dictionaries to List of Lists
+
+"""
+Input: test_list = [{'Gfg': 123, 'best': 10}, {'Gfg': 51, 'best': 7}] 
+Output : [['Gfg', 'best'], [123, 10], [51, 7]] 
+
+Input : test_list = [{'Gfg' : 12}] 
+Output : [['Gfg'], [12]]
+
+Explanation: In This, we are converting list of dictionaries to list of lists in Python.
+"""
+
+import os 
+os.system('clear')
+
+test_list = [{'Gfg': 123, 'best': 10}, {'Gfg': 51, 'best': 7}]
+#test_list = [{'Gfg' : 12}] 
+
+print([element for element in test_list])
+
+print('\n')
+print([[keys for keys in test_list[0].keys()], *[list(element.values()) for element in test_list]])
+print([[keys for keys in test_list[0].keys()], [list(element.values()) for element in test_list]])
