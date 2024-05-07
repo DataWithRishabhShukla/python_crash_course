@@ -12,17 +12,20 @@ class Restaurant:
     
     def describe_restaurant(self):
         """Prints the attributes."""
-        print(f"Restaurant name: {self.restaurant_name.title()} with cuisine: {self.cusine_type}.")
+        print(f"Restaurant name: {self.restaurant_name.title()} \nCuisine: {self.cusine_type}")
     
     def open_restaurant(self):
         """ Tells if restaurant is open. """
         print(f"{self.restaurant_name} is open.")
 
     def set_number_served(self, customers_served):
-        """ Updated the customers_served attribute"""
+        """ Updates the customers_served attribute"""
         self.number_served = customers_served
     
-    def
+    def increment_number_served(self, customers_served):
+        """ Updates the customers_served attribute"""
+        self.number_served += customers_served
+
     
 restaurant = Restaurant('pizz_house', 'Italian')
 print(restaurant.cusine_type)
@@ -30,4 +33,7 @@ restaurant.describe_restaurant()
 print(restaurant.number_served)
 
 restaurant.set_number_served(20)
+print(restaurant.number_served)
+
+restaurant.increment_number_served(20)
 print(restaurant.number_served)
