@@ -1,0 +1,3 @@
+I love Python.
+It has lots of intreseting modules.
+Like strings list files exceptions.

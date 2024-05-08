@@ -17,3 +17,7 @@ for line in lines:
 
 #Printing the data after putting in the list
 print(data_list[:4])
+
+print("-"*40)
+for line in content.splitlines():
+    print(line.replace('Python', 'C'))
