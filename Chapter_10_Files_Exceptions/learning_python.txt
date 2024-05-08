@@ -1,0 +1,431 @@
+
+"""
+1. Syntax Highlighintng - Python iterprepter will scan line by line then apply different color coding to the fucntion / variables / text /loops.
+2. Python will keep track of latest value of the variables. 
+3. Variable names can not start with number . It can't have space in it.
+4. Variables are often described as boxes you can store your value in . However programaticlly variables are labels assigned to the values.
+5.  
+"""
+
+"""
+Strings :
+1. A string is series of characters . Anything inside quotes is cosidered strings in python . You can use both [ ' ' or " "].
+2. A methon is an action that python can perform on the piece of data. 
+3. name.title() -: title is an Action . '.' is telling python interpreter to callaction on name .
+4. Each method is followed by set of parathesis because methods genrally requires  additional inforamtion to perform their work. [title()]
+5. f-strings : formatted strings 
+6. In programming - Whitespace refers to any non printing characters . Such as spaces, tabs , end of line symbols .
+7. rstrip() , lstrip() , strip() functions 
+
+"""
+
+"""
+Integers :
+    + , - , * , / , // , ** 
+    Supports order of opertions however you can change the order using parathesis .
+
+Float :
+    Number with decimal point . 
+
+Under Score in Numbers :
+    When you're woring the long numbers you can use _ to group digits.
+    nums = 14_000_000_000
+    print(nums) # 14000000000
+
+Constants 
+    Python does not have built in type for constants . However as good practise variable name all in caps is considered as constant.
+    MAX_NUMBER = 5000
+
+"""
+
+"""
+List:
+
+    A list is collection of items in a particular order.
+    Since list mostly contains more than one element . It is good practise to name it plurals .  items , names .
+
+Accessing a list :
+    Using a index , starts with 0 []
+    You can use the -ve index . -1 represents the last element .
+
+Modifying , Adding and Removing Elements :
+    Modifying -> Same as accessing the element
+    
+    Adding 
+        At the end using the append function . motorcycles.append('ducati')
+        At any location we can do using . motorcycles.insert(0,'hero') . This will shift all the elements to the right .
+
+    Remove
+        Using Index : del motorcycles[1] 
+        
+        Using pop method : This will remove the last element form the list 
+            popped_motorcycles = motorcycles.pop()
+            We can use index with pop to remove the items from the list.
+        
+        Remove using the value :
+            motorcycles.remove('ducati')
+            Gives error if element is not present in the list .
+            Also removes only the first occurance of the element.
+    
+    Sorting the List :
+        Using sort :
+            guests.sort()
+            guest.sort(reverse=Ture)
+            Sorts the original list permanently
+
+        Using Sorted :
+            sorted(guests)
+            Does not change the order of the orginal list
+            sorted(cars)
+            sorted(cars ,reverse=True)
+
+
+"""
+
+"""
+Iterating List :
+    Using for loop 
+
+Looping is imporatant because it's one of the most common ways a compoter automates repetetive tasks.
+
+Indendetion will decide , how code blocks will be clubbed together . 
+
+The colon at the end of for statement tells Python to interpret the next line as the start of loop. 
+
+range function : 
+    range(start_sequence, end_sequence,step_size)
+    Defaults : step - 1, start_sequence - 0 
+    range(1,5) - 1,2,3,4
+    range(6)   - 0,1,2,3,4,5
+    numbers = list(range(1,7))
+
+min(digits),max(digits),sum(digits)
+    
+"""
+
+"""
+slicing a list 
+traversing a subset of list 
+copying a list
+    list1= list2 -> this will not copy list . It will be second variable pointing to the same list .
+"""
+
+Chapter - 5 If statement 
+
+"""
+    '==' tests the condition in case sensitive manner
+    Equality Operator   -> '=='
+    Inequality Operator -> '!='
+
+Checking Multiple condition :
+    You can se use 'and' and 'or' for combining the conditions .
+    if age >18 and region =='usa':
+        print('Allow')
+
+in , not in -> To check check existance of valuein list .
+
+Boolean value  -> True or False 
+
+Types of if statements 
+    - simple if statement 
+        if age > 18 :
+            print('You')
+
+    - if else statment 
+    - if-elif-else chain ->  Mutilple if statements 
+    - if-elif chain -> You can omit else block in the if-elif chain 
+
+    - In the if-elif chain if once codition is true , it will omit the evalution of remaining conditions .
+    - If multiple if can be true then better to go with series of muiltple if statement .
+"""
+
+Chapter - 6 - Dictionary 
+
+"""
+Dictionary 
+    - allows you connect pieces of related information .
+    - Nesting 
+        - dictionary inside a list 
+        - list inside a dictionary
+        - dictionary inside a dictionary 
+
+Python dictionary 
+    - a dictionary in python is collection of key-value pairs 
+    - each key is connected to a value . you can use key to access the value .
+    - a key's value can be string, number , list , or another dictionary 
+    - you can use any object that you can create in python as a value in dictionary 
+    - every key is associated to value by ':' 
+    - individual key-value pairs are seperated by ','
+
+Accessing Value in a dictioanary 
+    - dictionary_name[<key_name>]
+
+Adding New key-value Pairs 
+    - dictionary are dynamic structures 
+    - you can add new key value pairs at any time 
+    - dictionary  with new_key name wrapped in square brackets along with new value 
+
+Creating empty dictionary 
+    - <dictionary_name> = {}
+
+Modifying value in the dictionary 
+    - alien_0['color'] = 'green'
+
+Removing a key-value pairs 
+    - del alien_0['color']
+
+using get to to access the dictionary element
+    - alien_0 = {'color': 'green', 'speed':'slow'}
+    - print(alien_0['x_pos']) # Throws key-error
+    - print(alien_0.get('x_pos','This key does not exist !'))
+    - If you don't define the mesage it will return None .
+
+Looping through dictionary :
+    - dict.items()
+    - dict.keys()  is default behaviour . 
+IMP      - [for key in dict.keys()] is same as [for key in dict] 
+    - dict.values()
+    - looping in an order 
+        - sorted(dict.keys())
+        - for name in sorted(favorite_laguage):
+
+list -> []
+tuple -> ()
+dictianary -> {}
+set -> {}
+
+set 
+    - can be defined using {}
+    - contains only unique value 
+    - you use set() function also to creare set 
+    - Unlike list and dictionaries , sets do not maintain element in specific order 
+    - Both dictiaries and sets use {} ,
+        - if it has key-value then dictionary .
+        - If it has only values then sets 
+
+      
+"""
+
+"""
+Nesting of dictionary:
+    - mutilple dictionary in a list 
+    - list of items in a dictionary 
+    - dictionary inside a dictionary
+
+List of dictionary 
+    [{'color': 'green', 'points': 5, 'speed': 'slow'}, {'color': 'green', 'points': 5, 'speed': 'slow'}]
+
+List in dictionary 
+    - you can nest list inside a dictionary when you more than value to be associated with a key.
+    - favorite_laguage ={
+        'rishabh':['python','java'],
+        'charu':['c++','go']
+    }
+Dictionary in dictionary
+
+"""
+
+Chapter - 7 - User Input and While Loop 
+"""
+input(prompt) Function:
+    - Takes only one parameter prompt 
+    - Write clear prompts 
+    - Leave a space after prompt 
+
+Using int() for Numerical input 
+    - int(input('Please enter your age ?'))
+    - 
+
+While Loop:
+    - it executes a code block as long as condition is true .
+
+Using a flag .
+
+Using break to exit loop .
+
+continue 
+    - continue will move the execution to the start if the loop 
+"""
+
+Chapter - 8 - functions
+"""
+Functions
+    
+    - Functions to display some values 
+    - Function to return some values or set of values 
+    - Functions in seperate files called modules 
+
+Defining the function 
+    - function definition 
+    - function parathensis
+    - docstring 
+    - function body 
+    - function call
+
+Passing parameters to a function 
+
+Paremeter Vs Arguements
+    - Variable defined in the function definition is call - function parameter
+    - When we call the funciton pass value to parameter that is called arguments .
+
+Passing Arguemnts 
+    - positional arguments - which needs to be in the same order the parameters were written 
+    - keyword arguments    -  where each argumens consists of a variable name and value 
+    - list and dictionaries of value 
+
+positional arguments
+    - order matters in the positional arguments
+
+keyword arguments
+    - A keyword argument is name-value pair that you pass to a function 
+    - Order of keyword arguments does not matter 
+    - Positional argument follows keyword argument
+
+default values 
+    - When defining a function we can define a default value to arguments 
+    - when you use default values , any parameter with default value needs to be listed after all the parameter that don't have default value .
+    - This allows python to continue iterpreting positional arguments correctly 
+
+equivalent function calls 
+    - Since you can use multiple combination of the positional , keyword parameters 
+    - There are multiple ways you can call a function 
+
+avoiding arguments errors 
+    - unmatched arguments - when you provide fewer or more arguemts than a function needs to do its work.
+
+"""
+
+"""
+Functions
+
+Return Value 
+    - A function can return a value or set of value 
+
+returning a simple vlaue 
+    - return 'hello'
+
+making an arrgument optional 
+    - give the defualt value to the some parameters
+
+returning a dictionary 
+    - return <dictionar_name>
+
+Passing a List
+
+Modifying a list 
+    - When you pass list as arguments to function it will get full access to the list 
+    - It can modify the list 
+    - def print_models(unprinted_models, completed_models):
+
+Preventing a function from modifying list 
+    - In here instead of passing a list you can pass a copy of the list 
+    - While calling the function you can pass the copy of the list instead of orginal list 
+    - Using "list_name[:]"
+    - print_models(unprinted_models[:], completed_models):
+"""
+
+"""
+Functions
+
+Passing Arbitrary number of arguments 
+    - Sometimes you won't know ahead of time how many arguments a fucntion needs to accept .
+      Fortunetaly , Python allows a function to collect and arbitrary number of 
+      arguments from the calling statement.
+    
+    - The * asterisk in the parameter name *toppings tells python to make a tuple called 
+    toppings , containing all the values this function recieves 
+
+Mixing Positional and Arbitrary number
+    - def make_pizza(size, *toppings)
+    - The parameter that accepts arbitatry number of arguments must be placed 
+    last in the function definiton .
+    - In the function first value it recieved is assigned to size 
+    remaning all are assigned to tuple toppings.
+   - you will see generally  *args as arbitrary arguments name 
+
+Using arbitrary keyword arguments 
+    - you can write function that accepts as many key-value pairs as the calling statement provides.
+    - The definition of build_profile() expects a first and last name and then it allows the user
+    to pass in as many name-value pairs as they want . 
+    - The ** before the parameter **user_info cause pythont to create a dictionary called 
+    user_info containing all the extra name-value pairs the function recieves.
+    - you can mix positional , keyword and arbitrary values in many different ways when
+      writing your own functions.
+    
+    - **kwargs - default in many cases 
+
+"""
+
+"""
+Functions
+
+import pizza
+from pizza import make_pizza
+import pizza as pz
+from pizza import make_pizza as mp
+
+pizza.make_pizza(30,'corn','cheese','olive')
+make_pizza(40,'cheese','tomato')
+pz.make_pizza(50,'butter','cheese')
+mp(30,'bread','cheese')
+
+Storing yur Functions in Modules :
+
+    - One advantage of functions is the way they seperate blocks of code from your main program.
+    - you can go as step further by storing your functions in a seperate file called module and
+    then importing that module into your main program .
+    - An import statement tells python to make the code in a module available in the currently 
+    running prgram file . 
+    - storing your functions in a seperate file allows you to hide the detail of your program's 
+    code and focus on it's higher level logic .
+    - it also allows you to re-use functions in many different programs . when you store you func
+    in a seperate file you can share those files with other programers without having to share your
+    entire prpgram.
+
+Importing an entire module 
+    
+    - To start importing function first you need to create a module . A module is .py file that contains
+    the code you want to import into your program.
+    - Let's make a module that contains the function make_pizza() to make this module we put this function into a pizza.py file .
+    - when python reads this file the line import pizza tells tells python to open the file pizza.py and copy all the functions 
+    from it into this program.
+    - It does that in background. 
+    - All you need to know is any functions defined in the pizza.py will be available into your current .py file.
+    - To call a function a from the imported module 
+        - <module_name>.<function_name>(<argements>)
+        - import pizza
+        - pizza.make_pizza(30,'corn','cheese','olive')
+    
+    - This first approach to importing in which you simply write import <module> make every function from the module available in your
+    program . If you use this kind of import statement all the func will be available in your program.
+
+Importing Specific functions 
+
+    - You can also import specific function from a module 
+        - from <module_name> import <function_name>
+        - from pizza import make_pizza
+    - you can import as many functin as you want from a module by sperating each func name with ","
+        - from <module_name> import <function_name_0> , <function_name_1> ,<function_name_2>
+    - With this syntax you don't need to use dot notation when you call a function 
+
+Using as to give a function/ module alias 
+    - import pizza as p
+    - from pizza import make_pizza as mp
+
+Importing all function in a module 
+    - from pizza import *
+
+Styling Functions 
+    - Functions should have descriptive names and these names should use lowercase letter and underscore
+    - Module names should use these convetions as well
+    - Every function should have a comment in doc string format  """ """
+    - Comment should appear immediately after the function defnition 
+    - If you specify a default for a parameter no space should be used on either side of equal sign 
+        def function_name(param_0, param_1='default_value')
+    - The same convention should be used for keyword argument in function call 
+        function_name(value_0, param_1='value')
+    - all import should come at the begining only thing allowed before it is comments
+    - If module has more than one function it should have two blank lines between function 
+    definitions. 
+
+"""

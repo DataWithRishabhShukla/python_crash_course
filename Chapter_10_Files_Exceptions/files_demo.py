@@ -1,6 +1,15 @@
 """ 
 Chapter 10 - Files and Exceptions
 
+1. From the module pathlib import class Path 
+    a. from pathlib import Path
+2. Define an instance of the class Path
+    a. path = Path('<file_path>.txt')
+3. Read the content using the function read_text()
+    a. content = path.read_text()
+4. Reads all the  data in form of text .
+5. You can split it in lines using the funcion split_lines()
+    a. lines = content.split_lines()
 """
 
 import os
@@ -19,9 +28,39 @@ for line in lines:
 #working with file content
 lines = content.splitlines()
 pi = ''
-
 for line in lines:
     pi += line.strip()
 
 print(pi)
 print(len(pi))
+
+# Pi with million digits
+path = Path('/Users/rishabhshukla/git_projects/python_crash_course/Chapter_10_Files_Exceptions/pi_million_digits.txt')
+content = path.read_text()
+lines = content.splitlines()
+
+pi_string = ''
+for line in lines:
+    pi +=line.lstrip()
+
+print(pi[:66]+"...")
+print(len(pi))
+
+
+# Birthday in pi
+from pathlib import Path
+
+path = Path('/Users/rishabhshukla/git_projects/python_crash_course/Chapter_10_Files_Exceptions/pi_million_digits.txt')
+content = path.read_text()
+lines = content.splitlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.lstrip()
+
+birthday = input("Enter your birthday: ")
+
+if birthday in pi_string:
+    print("Your birtday exist in pi!!")
+else:
+    print("Your birtday does not exist in pi!!")
