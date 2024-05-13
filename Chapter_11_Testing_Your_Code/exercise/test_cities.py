@@ -14,4 +14,4 @@ def test_city_population():
     """Function tests formatted string the city, country."""
 
     formatted_String = get_city_country_names('delhi', 'india', 300000)
-    assert formatted_String == "Delhi, India - population 300000"
+    assert formatted_String == "Delhi, India - Population 300000"
