@@ -23,7 +23,15 @@ Python’s Assert Syntax:
     Note - Assert only run when debug is enabled . however sometime while optimizing interpreter disables the debug.
     That results in the not running the assert statement. 
 
-    - 
+    - Neve pass assert with tuple , always true asserts
+    - assert(1==2, 'This should Fail')
+
+Key Takeaways
+• Python’s assert statement is a debugging aid that tests a condition
+as an internal self-check in your program.
+• Asserts should only be used to help developers identify bugs.
+They’re not a mechanism for handling run-time errors.
+• Asserts can be globally disabled with an interpreter setting.
 """
 import os 
 os.system('clear')
@@ -36,25 +44,55 @@ def apply_discount(product, discount):
 shoes = {'name': 'Nike Jordan', 'price': 14900}
 print(apply_discount(shoes, 0.25))
 
-print(apply_discount(shoes, 2))
+print(apply_discount(shoes, 0.2))
 
 #---------------------------------------------------------
 
-# Wrong way to use assert
-def delete_product(prod_id, user):
-    assert user.is_admin(), "Must be admin"
-    assert store.has_product(prod_id), "Unknown product"
-    store.get_product(prod_id).delete()
+# # Wrong way to use assert
+# def delete_product(prod_id, user):
+#     assert user.is_admin(), "Must be admin"
+#     assert store.has_product(prod_id), "Unknown product"
+#     store.get_product(prod_id).delete()
 
-# If interpreter disables the debug anyone can delete the data.
+# # If interpreter disables the debug anyone can delete the data.
 
-# Right way of deleting product
+# # Right way of deleting product
 
-def delete_product(prod_id, user):
-    if not user.is_admin():
-        raise AuthError('Must be admin')
-    if not store.has_product(prod_id):
-        raise ValueError('Unknown product')
-    store.get_product(prod_id).delete()
+# def delete_product(prod_id, user):
+#     if not user.is_admin():
+#         raise AuthError('Must be admin')
+#     if not store.has_product(prod_id):
+#         raise ValueError('Unknown product')
+#     store.get_product(prod_id).delete()
 
 #---------------------------------------------------------
+assert(1==2, 'This should Fail')
+print("---")
+
+#########################################################
+"""
+2.2 Complacent Comma Placement
+    - Putting the comma(",") at the end of each element in list,dict,set
+    - It helps in identifying the diff after changes
+    - Bcoz it's hard for git to track change in same line
+    - To resolve 
+        - make it multiline
+        - add comma at the end of each element
+
+Key Takeaways
+    • Smart formatting and comma placement can make your list,
+    dict, or set constants easier to maintain.
+    • Python’s string literal concatenation feature can work to your
+    benefit, or introduce hard-to-catch bugs.
+"""
+
+import os 
+os.system('clear')
+
+names = [
+    'rishabh',
+    'charu',
+    'Adi',
+]
+
+print(names)
