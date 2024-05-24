@@ -48,22 +48,22 @@ print(apply_discount(shoes, 0.2))
 
 #---------------------------------------------------------
 
-# # Wrong way to use assert
-# def delete_product(prod_id, user):
-#     assert user.is_admin(), "Must be admin"
-#     assert store.has_product(prod_id), "Unknown product"
-#     store.get_product(prod_id).delete()
+# Wrong way to use assert
+def delete_product(prod_id, user):
+    assert user.is_admin(), "Must be admin"
+    assert store.has_product(prod_id), "Unknown product"
+    store.get_product(prod_id).delete()
 
-# # If interpreter disables the debug anyone can delete the data.
+# If interpreter disables the debug anyone can delete the data.
 
-# # Right way of deleting product
+# Right way of deleting product
 
-# def delete_product(prod_id, user):
-#     if not user.is_admin():
-#         raise AuthError('Must be admin')
-#     if not store.has_product(prod_id):
-#         raise ValueError('Unknown product')
-#     store.get_product(prod_id).delete()
+def delete_product(prod_id, user):
+    if not user.is_admin():
+        raise AuthError('Must be admin')
+    if not store.has_product(prod_id):
+        raise ValueError('Unknown product')
+    store.get_product(prod_id).delete()
 
 #---------------------------------------------------------
 assert(1==2, 'This should Fail')
@@ -96,3 +96,27 @@ names = [
 ]
 
 print(names)
+
+#########################################################
+
+"""
+2.3 Context Managers and the with Statement
+
+"""
+
+with open('hello.txt', 'w') as f:
+    f.write('Hello ')
+
+"""
+Opening files using the with statement is generally recommended because
+it ensures that open file descriptors are closed automatically after
+program execution leaves the context of the with statement. Internally,
+the above code sample translates to something like this:
+"""
+f = open('hello.txt', 'w')
+try:
+    f.write('message')
+finally:
+    f.close()
+
+
