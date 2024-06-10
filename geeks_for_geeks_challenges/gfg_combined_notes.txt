@@ -1,0 +1,5 @@
+Sets:
+    - set(list1).difference(set(list2)) 
+        - gives extra element of the list1 
+    - set(list1).intersection(set(list2)) 
+        - gives common element between list1 and list2

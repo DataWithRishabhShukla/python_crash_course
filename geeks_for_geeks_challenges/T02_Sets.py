@@ -31,7 +31,7 @@ def sets_problem_2(sample: set):
         print(element)
 
 
-os.system('clear')
+
 ip_set_1 = {"geeks"}
 ip_set_2 = set("geeks")
 sets_problem_2(ip_set_1)
@@ -39,7 +39,7 @@ sets_problem_2(ip_set_2)
 
 
 def set_problem_3(sample):
-    """Maximum and Minimum in a Set """
+    """ Maximum and Minimum in a Set """
     return {"max":max(sample), "min":min(sample)}
 
 input_set = {1,2,3,23,0}
@@ -59,11 +59,50 @@ def set_problem_3(sample):
     """
     return {"max":max(sample), "min":min(sample)}
 
-input_set = {1,2,3,4,5}
-print(input_set.pop())
-print(input_set)
-print(input_set.discard(23))
-print(input_set)
-print(input_set.remove(32))
-print(input_set)
-print(input_set.pop())
+input_set = {1,23,32,4,5}
+# print(input_set.pop())
+# print(input_set)
+# print(input_set.discard(23))
+# print(input_set)
+# print(input_set.remove(32))
+# print(input_set)
+# print(input_set.pop())
+
+
+
+os.system('clear')
+a = [1, 2, 3, 4, 5]
+b = [5, 6, 7, 8, 9]
+flag = [True if x in b else False for x in a ]
+print(all(flag))
+
+a_set = set(a)
+b_Set = set(b)
+print(a_set.intersection(b_Set))
+
+from collections import Counter
+print(Counter(a))
+
+#Python program to find common elements in three lists using sets
+ar1 = [1, 5, 10, 20, 40, 80]
+ar2 = [6, 7, 20, 80, 100]
+ar3 = [3, 4, 15, 20, 30, 70, 80, 120]
+
+ar1_set = set(ar1)
+ar2_set = set(ar2)
+ar3_set = set(ar3)
+
+print(ar1_set.intersection(ar2_set).intersection(ar3_set))
+
+# Using list comprehension 
+print("Using list comprehension ")
+print([x for x in ar1 if x in ar2 and x in ar3])
+
+
+os.system('clear')
+#Python | Find missing and additional values in two lists
+
+list1 = [1, 2, 3, 4, 5, 6] 
+list2 = [4, 5, 6, 7, 8] 
+
+print(f"Missing elements of list1 form list2 :{set(list1).difference(set(list2))}")
