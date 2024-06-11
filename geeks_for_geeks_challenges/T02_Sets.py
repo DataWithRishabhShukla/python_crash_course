@@ -106,3 +106,11 @@ list1 = [1, 2, 3, 4, 5, 6]
 list2 = [4, 5, 6, 7, 8] 
 
 print(f"Missing elements of list1 form list2 :{set(list1).difference(set(list2))}")
+print(f"Common elements of list1 form list2 :{set(list1).intersection(set(list2))}")
+
+#Python | Difference between two lists
+list1 = [10, 15, 20, 25, 30, 35, 40]
+list2 = [25, 40, 35] 
+
+print([e for e in list1 if e not in list2 ])
+print(set(list1).difference(set(list2)))
